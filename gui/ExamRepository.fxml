@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ExamRepositoryGUI">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/backgraond.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="14.0" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="deleteButton" layoutX="517.0" layoutY="163.0" mnemonicParsing="false" onAction="#deleteButtonAction" prefHeight="35.0" prefWidth="69.0" text="Delete">
+               <font>
+                  <Font name="FrankRuehl" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="insertButton" layoutX="517.0" layoutY="113.0" mnemonicParsing="false" onAction="#insertButtonAction" prefHeight="35.0" prefWidth="69.0" text="Insert" textFill="#3e2d2d">
+               <font>
+                  <Font name="FrankRuehl" size="15.0" />
+               </font>
+            </Button>
+            <TableView fx:id="table" layoutX="17.0" layoutY="82.0" prefHeight="303.0" prefWidth="487.0">
+              <columns>
+                <TableColumn fx:id="examIDCol" prefWidth="83.0" text="Exam ID" />
+                  <TableColumn fx:id="teacherNameCol" prefWidth="110.0" text="Teacher Name" />
+                <TableColumn fx:id="cNameCol" prefWidth="225.0" text="Course Name" />
+                  <TableColumn fx:id="durationCol" prefWidth="68.0" text="Duration" />
+              </columns>
+            </TableView>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </Pane>
+      <Label layoutX="87.0" layoutY="10.0" prefHeight="57.0" prefWidth="316.0" text="Exam Menu" textFill="#1348bd" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="Lemon Regular" size="34.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+   </children>
+</AnchorPane>

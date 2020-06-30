@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ReportViewGUI">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/biggerBackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/backgraond.png" />
+         </image>
+      </ImageView>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <right>
+            <AnchorPane prefHeight="400.0" prefWidth="405.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BarChart fx:id="histograma" layoutX="168.0" layoutY="63.0" prefHeight="257.0" prefWidth="336.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                     <padding>
+                        <Insets right="40.0" />
+                     </padding>
+                     <effect>
+                        <Blend mode="LIGHTEN" />
+                     </effect>
+                  </BarChart>
+               </children>
+            </AnchorPane>
+         </right>
+         <left>
+            <AnchorPane prefHeight="400.0" prefWidth="293.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="18.0" layoutY="217.0" prefHeight="31.0" prefWidth="128.0" text="Grades Avarage: " textFill="#1714d3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="269.0" prefHeight="29.0" prefWidth="91.0" text="Mediean:" textFill="#1714d3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="avgLabel" layoutX="159.0" layoutY="219.0" prefHeight="27.0" prefWidth="94.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="midLabel" layoutX="95.0" layoutY="272.0" prefHeight="27.0" prefWidth="186.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="159.0" prefHeight="31.0" prefWidth="81.0" text="report ID:" textFill="#1714d3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reportTxt" layoutX="14.0" layoutY="105.0" prefHeight="46.0" prefWidth="243.0" textFill="#1714d3">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="40.0" fitWidth="43.0" layoutX="137.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/GoBack.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="150.0" layoutY="8.0" prefHeight="51.0" prefWidth="248.0" text="Report View" textFill="#2e3ae5">
+                     <font>
+                        <Font name="Lemon Regular" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="repID" layoutX="157.0" layoutY="163.0" prefHeight="27.0" prefWidth="94.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

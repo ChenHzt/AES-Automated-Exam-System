@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="400.0" maxWidth="600.0" minHeight="338.0" minWidth="584.0" prefHeight="338.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ShowExamsScoresGUI">
+   <children>
+      <ImageView fitHeight="348.0" fitWidth="590.0" layoutX="-4.0" layoutY="-4.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/backgraond.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="190.0" layoutY="6.0" prefHeight="46.0" prefWidth="252.0" text="Student's Grades" textFill="#1348bd">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="41.755" radius="22.106250000000003" width="48.67" />
+         </effect>
+      </Label>
+      <ImageView fitHeight="46.0" fitWidth="48.0" layoutX="142.0" layoutY="6.0">
+         <image>
+            <Image url="@../images/studentIcon.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="gradeTable" layoutX="23.0" layoutY="78.0" prefHeight="220.0" prefWidth="402.0">
+         <columns>
+            <TableColumn fx:id="examID" prefWidth="75.33334350585938" text="Exam ID" />
+            <TableColumn fx:id="grade" prefWidth="55.666656494140625" text="Grade" />
+            <TableColumn fx:id="dateCol" prefWidth="136.33334350585938" text="Date" />
+            <TableColumn fx:id="courseName" prefWidth="131.6666259765625" text="Course Name" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="57.0" fitWidth="57.0" layoutX="427.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/search.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="480.0" layoutY="137.0" text="Show Exam">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="ShowExamButton" defaultButton="true" layoutX="434.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#ShowExamButtonAction" opacity="0.0" prefHeight="64.0" prefWidth="127.0" text="Show Exam" textFill="#3e2d2d">
+         <font>
+            <Font name="FrankRuehl" size="15.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</Pane>

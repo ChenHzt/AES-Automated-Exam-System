@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="400.0" maxWidth="600.0" minHeight="345.0" minWidth="600.0" prefHeight="345.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PerformanceExamsGUI">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/backgraond.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="150.0" prefHeight="66.0" prefWidth="315.0" text="Exams To Perform" textFill="#154abd">
+         <font>
+            <Font name="Lemon Regular" size="28.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <TableView fx:id="table" layoutX="9.0" layoutY="89.0" prefHeight="242.0" prefWidth="410.0">
+         <columns>
+            <TableColumn fx:id="examIDCol" prefWidth="99.66665649414062" text="Exam Number" />
+            <TableColumn fx:id="cNameCol" prefWidth="99.0" text="Course Name" />
+            <TableColumn fx:id="teacherNameCol" prefWidth="109.33331298828125" text="Teacher Name" />
+            <TableColumn fx:id="durationCol" prefWidth="100.0" text="Duration" />
+         </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="35.0" fitWidth="177.0" layoutX="420.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/goodluck.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="43.0" layoutX="454.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/outExam.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="496.0" layoutY="110.0" text="Manually">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="42.0" layoutX="444.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/comp.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="486.0" layoutY="190.0" text="Computerized">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="ComputerizedButton" layoutX="446.0" layoutY="182.0" mnemonicParsing="false" onAction="#ComputerizedButtonAction" opacity="0.0" prefHeight="50.0" prefWidth="144.0" text="Computerized">
+         <font>
+            <Font name="FrankRuehl" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="ManuallyButton" layoutX="444.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#ManuallyButtonButtonAction" opacity="0.0" prefHeight="50.0" prefWidth="124.0" text="Manually" textFill="#3e2d2d">
+         <font>
+            <Font name="FrankRuehl" size="15.0" />
+         </font>
+      </Button>
+   </children>
+   <effect>
+      <Glow />
+   </effect>
+   <padding>
+      <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+   </padding>
+</Pane>

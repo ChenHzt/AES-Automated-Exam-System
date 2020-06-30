@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ExamInExecutionPreviewGUI">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/backgraond.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="56.0" layoutY="92.0" prefHeight="20.0" prefWidth="65.0" text="examID:" textFill="#2d31f5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="14.0" prefHeight="41.0" prefWidth="464.0" text="Exam In Execution details" textFill="#1f23fc">
+         <font>
+            <Font name="Lemon Regular" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="41.0" fitWidth="47.0" layoutX="123.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/GoBack.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="122.0" layoutY="371.0" text="back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="96.0" layoutY="322.0" mnemonicParsing="false" onAction="#backBtnAction" opacity="0.0" prefHeight="61.0" prefWidth="77.0" text="Button" />
+      <ImageView fx:id="lockBtnImg" fitHeight="41.0" fitWidth="47.0" layoutX="328.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lockLable" layoutX="319.0" layoutY="365.0" prefHeight="17.0" prefWidth="65.0" text="lock exam">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="lockExamBtn" layoutX="311.0" layoutY="327.0" mnemonicParsing="false" onAction="#lockExamBtnAction" opacity="0.0" prefHeight="61.0" prefWidth="77.0" text="Button" />
+      <ImageView fx:id="overTimeBtnImg" fitHeight="41.0" fitWidth="47.0" layoutX="222.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/hourglass.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="overtimeLable" layoutX="202.0" layoutY="368.0" text="request overtime">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="requestOvertimeBtn" layoutX="205.0" layoutY="330.0" mnemonicParsing="false" onAction="#requestOvertimeBtnAction" opacity="0.0" prefHeight="61.0" prefWidth="77.0" text="Button" />
+      <Label fx:id="examIDLabel" layoutX="153.0" layoutY="93.0" prefHeight="20.0" prefWidth="77.0" />
+      <Label layoutX="56.0" layoutY="135.0" prefHeight="20.0" prefWidth="104.0" text="course Name:" textFill="#2d31f5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="courseNameLabel" layoutX="164.0" layoutY="137.0" prefHeight="20.0" prefWidth="119.0" />
+      <Label layoutX="65.0" layoutY="179.0" prefHeight="20.0" prefWidth="104.0" text="examenees:" textFill="#2d31f5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="157.0" prefHeight="17.0" prefWidth="151.0" text="this exam is open to:" textFill="#1d27cf">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="isGroupLabel" layoutX="209.0" layoutY="158.0" prefHeight="21.0" prefWidth="83.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="114.0" layoutY="200.0" prefHeight="121.0" prefWidth="414.0">
+        <columns>
+          <TableColumn fx:id="sIDCol" prefWidth="115.33329010009766" text="ID" />
+          <TableColumn fx:id="sNameCol" prefWidth="168.66673278808594" text="Name" />
+            <TableColumn fx:id="isSubmittedCol" prefWidth="129.33334350585938" text="submitted the exam?" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="lockedImg" fitHeight="162.0" fitWidth="414.0" layoutX="193.0" layoutY="82.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../images/locked.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="statImg" fitHeight="41.0" fitWidth="47.0" layoutX="435.0" layoutY="333.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/diagram.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="examStatLabel" layoutX="425.0" layoutY="371.0" text="exam statistics">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="statBtn" layoutX="336.0" layoutY="340.0" mnemonicParsing="false" onAction="#statBtnAction" opacity="0.0" prefHeight="61.0" prefWidth="83.0" text="Button" />
+      <PieChart fx:id="pieChart" layoutX="328.0" layoutY="49.0" legendVisible="false" prefHeight="151.0" prefWidth="211.0" visible="false" />
+      <Label fx:id="executeByLable" layoutX="285.0" layoutY="77.0" prefHeight="30.0" prefWidth="97.0" text="executed by:" textFill="#3f30e3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="executeTeacherLable" layoutX="387.0" layoutY="84.0" prefHeight="17.0" prefWidth="104.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="114.0" prefHeight="20.0" prefWidth="104.0" text="executionID:" textFill="#2d31f5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="executionIDLabel" layoutX="152.0" layoutY="114.0" prefHeight="20.0" prefWidth="77.0" />
+   </children>
+</AnchorPane>

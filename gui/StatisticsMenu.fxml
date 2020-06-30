@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.StatisticsMenuGUI">
+   <children>
+      <ImageView fitHeight="513.0" fitWidth="653.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/backgraond.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="20.0" layoutY="31.0" text="Statistics Menu" textFill="#2819cf">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="reportCombo" layoutX="16.0" layoutY="107.0" onAction="#reportComboAction" prefHeight="25.0" prefWidth="166.0" promptText="Choose Report Option" />
+      <ComboBox fx:id="studentCombo" layoutX="202.0" layoutY="107.0" onAction="#studentComboAction" prefHeight="25.0" prefWidth="199.0" promptText="Choose Student" />
+      <ComboBox fx:id="examCombo" layoutX="419.0" layoutY="107.0" onAction="#examComboAction" prefHeight="25.0" prefWidth="199.0" promptText="Choose Exam" />
+      <ComboBox fx:id="courseCombo" layoutX="202.0" layoutY="107.0" onAction="#courseComboAction" prefHeight="25.0" prefWidth="199.0" promptText="Choose Course" />
+      <GridPane fx:id="grid" layoutX="21.0" layoutY="144.0" prefHeight="351.0" prefWidth="606.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="279.0" minHeight="10.0" prefHeight="279.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="medianLabel" layoutX="14.0" layoutY="20.0" prefHeight="20.0" prefWidth="166.0" textFill="#2917d0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="avgLabel" layoutX="325.0" layoutY="20.0" prefHeight="25.0" prefWidth="199.0" textFill="#2917d0">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <ComboBox fx:id="teacherCombo" layoutX="202.0" layoutY="107.0" onAction="#teacherComboAction" prefHeight="25.0" prefWidth="199.0" promptText="Choose Teacher" />
+   </children>
+</AnchorPane>
